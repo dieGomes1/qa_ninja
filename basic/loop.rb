@@ -1,5 +1,5 @@
 5.times do |i|
-  puts 'contando com TIMES '+ i.to_s
+  puts 'contando com TIMES ' + i.to_s
 end
 puts '*************************************************************'
 
