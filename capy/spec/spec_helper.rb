@@ -1,9 +1,10 @@
 require 'capybara'
 require 'capybara/rspec'
+require 'selenium-webdriver'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
-  expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
   config.mock_with :rspec do |mocks|
@@ -16,4 +17,6 @@ end
 
 Capybara.configure do |config|
   config.default_driver = :selenium_chrome
+  config.default_max_wait_time = 15
+  config.app_host = 'https://training-wheels-protocol.herokuapp.com'
 end
